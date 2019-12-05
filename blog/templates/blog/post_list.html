@@ -4,16 +4,12 @@
         <title>BLOG</title>
     </head>
     <body>
+        {% for post in posts %}
         <div>
-            <h1><a href="/">BLOG</a></h1>
+            <h2>{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <p>publish: {{ post.publish_date }}</p>
         </div>
-        <div>
-            <h1><a href="">First post</a></h1>
-            <p>asbdkajsdjemwdsl.</p>
-        </div>
-        <div>
-            <h1><a href="">Second post</a></h1>
-            <p>asbkjdansdlasdajw.</p>
-        </div>
+        {% endfor %}
     </body>
 </html>
